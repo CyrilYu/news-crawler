@@ -10,6 +10,10 @@ import urllib
 import csv
 import time
 import urllib.parse
+import mimetypes
+from flask_mail import Mail
+from flask_mail import Message
+from flask import send_from_directory
 
 import requests
 from bs4 import BeautifulSoup
@@ -18,6 +22,11 @@ import random
 app = Flask(__name__)
 cors = CORS(app, resources={r"*": {"origins": "*"}})
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+@app.route('/download', methods=['GET', 'POST'])
+def download():
+  filepath = os.path.join(app.root_path, '..')
+  return send_from_directory(filepath, 'output.csv', mimetype='application/octet-stream', as_attachment=True)
 
 #get /searching
 @app.route('/searching', methods=['GET', 'POST'])
@@ -31,16 +40,17 @@ def searching():
   print(cfg['reducenews'])
   with open('output.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', lineterminator='\n')
-    writer.writerow(['id', 'media', 'title', 'url'])
+    writer.writerow(['id', 'date', 'media', 'title', 'url'])
     counter = 1
     saver = 1
     for key, value in cfg['reducenews'].items():
       q_str = 'site:' + value['url'] + ', ' + keywords
       print(q_str)
       print(saver)
-      print(saver%3)
-      if saver%3 == 0:
-        time.sleep(60)
+      print(saver%10)
+      sleep_time = random.randint(60, 180)
+      if saver%10 == 0:
+        time.sleep(sleep_time)
       # 查詢參數
       # q_str = 'site:today.line.me, ' + data['keywords']
       my_params = {'q': q_str}
@@ -61,7 +71,7 @@ def searching():
       print(headers)
 
       # 下載 Google 搜尋結果
-      r = requests.get(google_url, params=urlencode(my_params), headers=headers)
+      r = requests.get(google_url, params=urlencode(my_params))
       r.encoding = 'utf-8'
       print(r.encoding)
 
@@ -76,20 +86,27 @@ def searching():
 
         # 以 CSS 的選擇器來抓取 Google 的搜尋結果
         items = soup.select('div.g > h3.r > a[href^="/url"]')
+        dates = soup.select('div.g > div.s > span.st')
+        date_counter = 1
         for i in items:
+          time.sleep(random.randint(1, 3))
           url = urllib.parse.unquote(urllib.parse.unquote(i.get('href').replace("/url?q=", "")))
           title = i.text
           if url.index('&sa=U') > 0:
             url = url.split('&sa=U', 1)[0]
-          writer.writerow([counter, value['title'], title, url])
+          if (len(dates[date_counter-1].text.split(' ... ')[0])) == 10:
+            date = dates[date_counter-1].text.split(' ... ')[0].replace('年', '/').replace('月', '/').replace('日', '')
+            writer.writerow([counter, date, value['title'], title, url])
+          else:
+            writer.writerow([counter, '', value['title'], title, url])
           counter += 1
+          date_counter += 1
           # result.append({'title': i.text, 'url': i.get('href')})
           # 標題
           print("標題：" + i.text)
           # # 網址
           # print("網址：" + i.get('href'))
       saver += 1
-      time.sleep(2)
   return json.dumps({'message': 'test'})
 
 app.run(port=5000)

@@ -30,24 +30,31 @@
   <!--===============================================================================================-->
   <script>
     $(document).ready(function(){
+      $('#download').hide()
       $('#search').click(function() {
-        alert($("#keywords").val())
-        // var request = $.ajax({
-        //   url: "http://localhost:5000/searching",
-        //   method: "POST",
-        //   dataType: 'json',
-        //   contentType: "application/json; charset=utf-8",
-        //   data: JSON.stringify({keywords: 'Hoi, 特力'})
-        // });
+        var keywords = $("#keywords").val()
+        alert(keywords)
+        $('#search').prop('disabled', true)
+        $('#search').val('searching.......')
+        var request = $.ajax({
+          url: "http://localhost:5000/searching",
+          method: "POST",
+          contentType: "application/json; charset=utf-8",
+          data: JSON.stringify({keywords: keywords})
+        });
         
-        // request.done(function( msg ) {
-        //   console.log(msg)
-        //   $( "#log" ).html( msg );
-        // });
+        request.done(function( msg ) {
+          console.log(msg)
+          $( "#log" ).html( msg );
+          // $('#search').prop('disabled', false)
+          // $('#search').val('search')
+          $('#search').hide();
+          $("#download").show();
+        });
         
-        // request.fail(function( jqXHR, textStatus ) {
-        //   alert( "Request failed: " + textStatus );
-        // });
+        request.fail(function( jqXHR, textStatus ) {
+          alert( "Request failed: " + textStatus );
+        });
       })
     })
   </script>
@@ -56,22 +63,23 @@
   <div class="limiter">
       <div class="container-login100">
         <div class="wrap-login100 p-t-85 p-b-20">
-          <form class="login100-form validate-form">
+          <form>
             <span class="login100-form-title p-b-70">
               News Crawler
             </span>
   
-            <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-              <input class="input100" type="text" name="keywords" id="keywords">
-              <span class="focus-input100" data-placeholder="Input Keywords"></span>
+            <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter keywords">
+              <input class="input100" type="text" name="keywords" placeholder="Input keywords" id="keywords">
             </div>
   
             <div class="container-login100-form-btn">
-              <button class="login100-form-btn" id="search">
-                Search
-              </button>
+              <input type="button" class="login100-form-btn" id="search" value="Search" />
             </div>
   
+            <div class="container-login100-form-btn" id="download">
+              <a href="http://localhost:5000/download"><h1>Download</h1></a>
+            </div>
+
           </form>
         </div>
       </div>
