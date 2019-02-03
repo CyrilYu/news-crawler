@@ -1,0 +1,673 @@
+reducenews:
+  ettoday_travel:
+    url: 'travel.ettoday.net'
+    title: 'Ettoday.com 東森新聞雲'
+  ettoday_news:
+    url: 'www.ettoday.net'
+    title: 'Ettoday.com 東森新聞雲'
+  ettoday_fashion:
+    url: 'fashion.ettoday.net'
+    title: 'Ettoday.com 東森新聞雲'
+  chinatimes:
+    url: 'www.chinatimes.com'
+    title: 'chinatimes.com 中時電子報'
+  Appledaily:
+    url: 'tw.news.appledaily.com'
+    title: 'Appledaily.com 蘋果新聞'
+  Libertytimes_playing:
+    url: 'playing.ltn.com.tw'
+    title: 'Libertytimes.com 自由電子報'
+  Libertytimes_news:
+    url: 'news.ltn.com.tw'
+    title: 'Libertytimes.com 自由電子報'
+  yam:
+    url: 'n.yam.com'
+    title: 'yam.com Yam蕃薯藤'
+  hinet:
+    url: 'times.hinet.net'
+    title: 'hinet.com Hinet'
+  Yahoo:
+    url: 'tw.news.yahoo.com'
+    title: 'Yahoo.com Yahoo新聞'
+  Hiking:
+    url: 'hiking.biji.co'
+    title: '健行筆記'
+  NOWnews: 
+    url: 'www.nownews.com'
+    title: NOWnews
+  Businessweekly:
+    url: 'www.businessweekly.com.tw'
+    title: 'Businessweekly.com 商業周刊'
+  businesstoday:
+    url: 'www.businesstoday.com.tw'
+    title: '今周刊'
+  money_udn:
+    url: 'money.udn.com'
+    title: 'money.udn.com 經濟日報'
+  setn:
+    url: 'www.setn.com'
+    title: 'setn.com 三立新聞網'
+  cna:
+    url: 'www.cna.com.tw'
+    title: 'cna.com 中央社'
+  tvbs:
+    url: 'news.tvbs.com.tw'
+    title: 'tvbs.com TVBS'
+  nextmag:
+    url: 'www.nextmag.com.tw'
+    title: 'nextmag.com.tw 壹周刊'
+  storm:
+    url: 'www.storm.mg'
+    title: 'storm.mg 風傳媒'
+  ctee:
+    url: 'm.ctee.com.tw'
+    title: 'ctee.com 工商時報'
+  GNN:
+    url: 'gnn.gamer.com.tw'
+    title: 'GNN巴哈姆特'
+  La_Vie:
+    url: 'www.wowlavie.com'
+    title: 'La Vie行動家'
+  Line:
+    url: 'today.line.me'
+    title: 'LineToday'
+  msn:
+    url: 'www.msn.com'
+    title: 'msn.com MSN'
+  sina:
+    url: 'news.sina.com.tw'
+    title: 'sina.com 新浪新聞'
+  pchome:
+    url: 'news.pchome.com.tw'
+    title: 'Pchome新聞'
+  cts:
+    url: 'news.cts.com.tw'
+    title: 'CTS.com 華視新聞網'
+  ttv:
+    url: 'www.ttv.com.tw'
+    title: '台視新聞'
+  ftv:
+    url: 'news.ftv.com.tw'
+    title: '民視新聞'
+  ctv:
+    url: 'new.ctv.com.tw'
+    title: '中視新聞網'
+  nexttv:
+    url: 'www.nexttv.com.tw'
+    title: '壹電視'
+  udn:
+    url: 'udn.com'
+    title: 'UDN.com 聯合新聞網'
+  ctitv:
+    url: 'gotv.ctitv.com.tw'
+    title: '中天快點TV'
+  gtv:
+    url: 'www.gtv.com.tw'
+    title: '八大電視娛樂百分百'
+  ebc:
+    url: 'news.ebc.net.tw'
+    title: 'news.ebc.net.tw 東森新聞'
+  ebcbuzz:
+    url: 'www.ebcbuzz.com'
+    title: 'ebcbuzz.com噪咖'
+  Vogue:
+    url: 'www.vogue.com.tw'
+    title: 'Vogue.com'
+  GQ:
+    url: 'www.gq.com.tw'
+    title: 'GQ.com'
+  marieclaire:
+    url: 'www.marieclaire.com.tw'
+    title: 'marieclaire.com美麗佳人'
+  supertaste:
+    url: 'supertaste.tvbs.com.tw'
+    title: '食尚玩家supertaste.tvbs.com'
+  pts:
+    url: 'news.pts.org.tw'
+    title: '公視'
+  ustv:
+    url: 'www.ustv.com.tw'
+    title: '非凡電視'
+  technews:
+    url: 'technews.tw'
+    title: 'technews.tw 科技新報'
+  elle:
+    url: 'www.elle.com'
+    title: 'Elle.com'
+  esquire:
+    url: 'www.esquire.tw'
+    title: 'Esquire君子雜誌'
+  harpersbazaar:
+    url: 'www.harpersbazaar.com'
+    title: 'harpersbazaar.com'
+  Traveler:
+    url: 'www.travelerluxe.com'
+    title: 'Traveler旅人誌'
+  Travelcom:
+    url: 'travelcom.com.tw'
+    title: 'Travelcom.com行遍天下'
+  chewpeople:
+    url: 'chewpeople.com.tw'
+    title: '潮人物'
+  mirrormedia:
+    url: 'www.mirrormedia.mg'
+    title: '鏡傳媒'
+  niusnews:
+    url: 'www.niusnews.com'
+    title: 'niusnews.com 妞新聞'
+  juksy:
+    url: 'www.juksy.com'
+    title: 'juksy.com街星'
+  babyou:
+    url: 'babyou.nownews.com'
+    title: 'babyou.com 姊妹淘'
+  beauty321:
+    url: 'www.beauty321.com'
+    title: 'beauty321.com美人圈'
+  cool-style:
+    url: 'www.cool-style.com.tw'
+    title: 'cool-style.com'
+  TLC:
+    url: 'www.tlc-tw.com'
+    title: 'TLC'
+  ntdtv:
+    url: 'www.ntdtv.com.tw'
+    title: 'ntdtv.com.tw新唐人'
+  bnext:
+    url: 'https://www.bnext.com.tw/'
+    title: '數位時代'
+  buzzhand:
+    url: 'www.buzzhand.com'
+    title: 'buzzhand.com'
+  buzzbooklet:
+    url: 'www.buzzbooklet.com'
+    title: 'buzzbooklet'
+  thenewslens:
+    url: 'www.thenewslens.com'
+    title: '關鍵評論網'
+  cmoney:
+    url: 'www.cmoney.tw'
+    title: 'cmoney.tw 理財寶'
+  cnyes:
+    url: 'news.cnyes.com'
+    title: 'cnyes.com鉅亨網'
+  buzzorange:
+    url: 'buzzorange.com'
+    title: 'buzzorange.com 橘報'
+  iguang:
+    url: 'iguang.tw'
+    title: 'iguang.tw愛逛街'
+  women_talk:
+    url: 'women.talk.tw'
+    title: '滔客'
+  youthwant:
+    url: 'share.youthwant.com.tw'
+    title: 'youthwant.com 優仕網'
+  game_udn:
+    url: 'game.udn.com'
+    title: 'game.udn.com 遊戲角落'
+  gamebase:
+    url: 'www.gamebase.com.tw'
+    title: 'gamebase.com.tw 遊戲基地'
+  4gamers:
+    url: 'www.4gamers.com.tw'
+    title: '4gamers'
+  tsna:
+    url: 'www.tsna.com.tw'
+    title: 'tsna'
+  ltsports:
+    url: 'www.ltsports.com.tw'
+    title: '麗台運動報'
+  p9:
+    url: 'www.p9.com.tw'
+    title: '品酒網'
+  wowsight:
+    url: 'wowsight.tw'
+    title: 'WOWSIGHT'
+  sportsv:
+    url: 'www.sportsv.net'
+    title: '運動視界'
+  sportsplanetmag:
+    url: 'www.sportsplanetmag.com'
+    title: '運動星球 sportsplanetmag.com'
+  vamossports:
+    title: 'VAMOS SPORTS翊起運動'
+    url: 'vamossports.com.tw'
+  biosmonthly:
+    url: 'www.biosmonthly.com'
+    title: 'Bio Monthly'
+  everydayobject:
+    url: 'www.everydayobject.us'
+    title: 'Everyday Object'
+  haveanice:
+    title: 'haveanice'
+    url: 'www.haveanice.com'
+  orchina:
+    title: 'www.orchina.net'
+    url: 'orchina.netOR旅讀中國'
+  cycling_biji:
+    url: 'cycling.biji.co'
+    title: '自行車筆記'
+  rti:
+    url: 'news.rti.org.tw'
+    title: 'cdnews.com 中央網路報'
+  taiwannet:
+    url: 'news.taiwannet.com.tw'
+    title: '台灣產經新聞網'
+  kpopn:
+    url: 'www.kpopn.com'
+    title: 'kpopn韓娛最前線'
+  koreastardaily:
+    url: 'www.koreastardaily.com'
+    title: 'KSD - 韓星網'
+  fingermedia:
+    url: 'www.fingermedia.tw'
+    title: '指傳媒 fingermedia'
+  wownews:
+    title: 'wownews'
+    url: 'www.wownews.tw'
+  ciaotw:
+    url: 'www.ciaotw.com'
+    title: 'Ciao潮旅'
+  Jazko:
+    url: 'jazko.com'
+    title: 'Jazko'
+  cardu:
+    title: '卡優新聞網'
+    url: 'www.cardu.com.tw'
+  PopDaily:
+    title: 'PopDaily'
+    url: 'www.beauty321.com'
+  solomo_xinmedia:
+    url: 'solomo.xinmedia.com'
+    title: 'xinmedia.com 欣傳媒'
+  travelrich:
+    url: 'www.travelrich.com.tw'
+    title: '旅遊經'
+  suntravel:
+    url: 'www.suntravel.com.tw'
+    title: '太陽網'
+  newtalk:
+    title: 'newtalk.tw 新頭殼'
+    url: 'newtalk.tw'
+  upmedia:
+    url: 'www.upmedia.mg'
+    title: 'upmedia.mg 上報'
+  7to:
+    url: 'www.7to.com.tw'
+    title: '七逗旅遊網'
+  ieknet:
+    url: 'ieknet.iek.org.tw'
+    title: 'IEK產業情報網'
+  cyclingtime:
+    url: 'cyclingtime.com'
+    title: '單車時代'
+  cycling_update:
+    url: 'www.cycling-update.info'
+    title: '單車誌'
+  zi_media:
+    url: 'zi.media'
+    title: 'ZiMedia 字媒體'
+  oneday:
+    url: 'www.oneday.com.tw'
+    title: 'oneday.com.tw 小日子'
+  taronews:
+    url: 'taronews.tw'
+    title: 'taronews.tw 芋傳媒'
+  kaiak:
+    url: 'kaiak.tw'
+    title: '城市態度新美學'
+  artemperor:
+    url: 'artemperor.tw'
+    title: '非池中藝術網'
+  artouch:
+    url: 'artouch.com'
+    title: '典藏藝術網'
+  walkerland:
+    url: 'www.walkerland.com.tw'
+    title: 'Walkerland窩客島'
+  epochtimes:
+    url: 'www.epochtimes.com'
+    title: 'epochtimes.com大紀元'
+  peoplenews:
+    url: 'www.peoplenews.tw'
+    title: 'peoplenews 民報'
+  popbee:
+    url: 'popbee.com'
+    title: 'popbee.com'
+  tssdnews:
+    url: 'www.tssdnews.com.tw'
+    title: '台灣新生報'
+  mypeople:
+    url: 'www.mypeople.tw'
+    title: '民眾網'
+  twgreatnews:
+    title: 'twgreatnews.com 大成報'
+    url: 'www.greatnews.com.tw'
+  merit-times:
+    url: 'www.merit-times.com'
+    title: '人間福報'
+  ydn:
+    url: 'www.ydn.com.tw'
+    title: '青年日報'
+  taiwantimes:
+    url: 'www.taiwantimes.com.tw'
+    title: '台灣時報'
+  apportfolioasia:
+    title: '藝術地圖'
+    url: 'www.apportfolioasia.com'
+  house_style:
+    url: 'www.house-style.com.tw'
+    title: 'house-style.com 時尚家居雜誌'
+  mook:
+    url: 'www.mook.com.tw'
+    title: 'Mook.com景點家'
+  ttnmedia:
+    url: 'www.ttnmedia.com'
+    title: '旅報TTN'
+  richmarcom:
+    url: 'b2b.richmarcom.com.tw'
+    title: '旅奇Tracehrich'
+  solomo_xinmedia:
+    url: 'solomo.xinmedia.com'
+    title: '旅天下'
+  worldjournal:
+    url: 'www.worldjournal.com'
+    title: '世界日報'
+  top_gallerists:
+    url: 'www.top-gallerists.tw'
+    title: '臺灣一線畫廊主'
+  bcc:
+    url: 'www.bcc.com.tw'
+    title: 'Bcc.com.tw 中廣新聞網'
+  oneinfo:
+    url: 'oneinfo.tw'
+    title: '壹訊'
+  enews:
+    title: 'enews'
+    url: 'enews.tw'
+  iplayfun:
+    url: 'www.iplayfun.com.tw'
+    title: 'iPlayfun.com愛玩樂'
+  techlife:
+    url: 'www.techlife.com.tw'
+    title: 'techlife.com.tw 科技生活新聞'
+  ezpr:
+    url: 'www.ezpr.com.tw'
+    title: 'ezpr'
+  Nlog:
+    title: 'Nlog'
+    url: 'news.nlog.cc'
+  MoneyBar:
+    title: 'MoneyBar'
+    url: 'www.moneybar.com.tw'
+  Iwaishin_News:
+    title: 'Iwaishin News'
+    url: 'https://www.iwaishin.com/'
+  Travel_King:
+    title: 'Travel King'
+    url: 'www.travelking.com.tw'
+  allnews:
+    url: 'www.allnews.tw'
+    title: '台灣民眾電子報'
+  ocac:
+    url: 'www.ocac.gov.tw'
+    title: '中華民國僑委會新聞'
+  ksnews:
+    url: 'www.ksnews.com.tw'
+    title: '更生新聞網'
+  housefun:
+    url: 'news.housefun.com.tw'
+    title: '好房網'
+  GigaCircle:
+    title: 'GigaCircle'
+    url: 'tw.gigacircle.com'
+  travelnews:
+    url: 'www.travelnews.tw'
+    title: '宜蘭新聞網'
+  cntimes:
+    url: 'www.cntimes.info'
+    title: 'cntimes大華網路報'
+  fm1007lucky:
+    url: 'www.fm1007lucky.com'
+    title: '台中廣播FM100.7'
+  travel_talk:
+    url: 'travel.talk.tw'
+    title: 'hi 捷客'
+  freshweekly:
+    url: 'freshweekly.tw'
+    title: '鮮週報'
+  stufftaiwan:
+    url: 'www.stufftaiwan.com'
+    title: '史塔夫科技事務所Stuff.com'
+  anntw:
+    url: 'anntw.com'
+    title: 'anntw.com 台灣醒報'
+  ltsports:
+    url: 'www.ltsports.com.tw'
+    title: '麗台運動報'
+  p9:
+    url: 'www.p9.com.tw'
+    title: '品酒網'
+  wowsight:
+    url: 'wowsight.tw'
+    title: 'WOWSIGHT'
+  sportsv:
+    url: 'www.sportsv.net'
+    title: '運動視界'
+  sportsplanetmag:
+    url: 'www.sportsplanetmag.com'
+    title: '運動星球 sportsplanetmag.com'
+  vamossports:
+    title: 'VAMOS SPORTS翊起運動'
+    url: 'vamossports.com.tw'
+  biosmonthly:
+    url: 'www.biosmonthly.com'
+    title: 'Bio Monthly'
+  everydayobject:
+    url: 'www.everydayobject.us'
+    title: 'Everyday Object'
+  haveanice:
+    title: 'haveanice'
+    url: 'www.haveanice.com'
+  orchina:
+    title: 'www.orchina.net'
+    url: 'orchina.netOR旅讀中國'
+  cycling_biji:
+    url: 'cycling.biji.co'
+    title: '自行車筆記'
+  rti:
+    url: 'news.rti.org.tw'
+    title: 'cdnews.com 中央網路報'
+  taiwannet:
+    url: 'news.taiwannet.com.tw'
+    title: '台灣產經新聞網'
+  kpopn:
+    url: 'www.kpopn.com'
+    title: 'kpopn韓娛最前線'
+  koreastardaily:
+    url: 'www.koreastardaily.com'
+    title: 'KSD - 韓星網'
+  fingermedia:
+    url: 'www.fingermedia.tw'
+    title: '指傳媒 fingermedia'
+  wownews:
+    title: 'wownews'
+    url: 'www.wownews.tw'
+  ciaotw:
+    url: 'www.ciaotw.com'
+    title: 'Ciao潮旅'
+  Jazko:
+    url: 'jazko.com'
+    title: 'Jazko'
+  cardu:
+    title: '卡優新聞網'
+    url: 'www.cardu.com.tw'
+  PopDaily:
+    title: 'PopDaily'
+    url: 'www.beauty321.com'
+  solomo_xinmedia:
+    url: 'solomo.xinmedia.com'
+    title: 'xinmedia.com 欣傳媒'
+  travelrich:
+    url: 'www.travelrich.com.tw'
+    title: '旅遊經'
+  suntravel:
+    url: 'www.suntravel.com.tw'
+    title: '太陽網'
+  newtalk:
+    title: 'newtalk.tw 新頭殼'
+    url: 'newtalk.tw'
+  upmedia:
+    url: 'www.upmedia.mg'
+    title: 'upmedia.mg 上報'
+  7to:
+    url: 'www.7to.com.tw'
+    title: '七逗旅遊網'
+  ieknet:
+    url: 'ieknet.iek.org.tw'
+    title: 'IEK產業情報網'
+  cyclingtime:
+    url: 'cyclingtime.com'
+    title: '單車時代'
+  cycling_update:
+    url: 'www.cycling-update.info'
+    title: '單車誌'
+  zi_media:
+    url: 'zi.media'
+    title: 'ZiMedia 字媒體'
+  oneday:
+    url: 'www.oneday.com.tw'
+    title: 'oneday.com.tw 小日子'
+  taronews:
+    url: 'taronews.tw'
+    title: 'taronews.tw 芋傳媒'
+  kaiak:
+    url: 'kaiak.tw'
+    title: '城市態度新美學'
+  artemperor:
+    url: 'artemperor.tw'
+    title: '非池中藝術網'
+  artouch:
+    url: 'artouch.com'
+    title: '典藏藝術網'
+  walkerland:
+    url: 'www.walkerland.com.tw'
+    title: 'Walkerland窩客島'
+  epochtimes:
+    url: 'www.epochtimes.com'
+    title: 'epochtimes.com大紀元'
+  peoplenews:
+    url: 'www.peoplenews.tw'
+    title: 'peoplenews 民報'
+  popbee:
+    url: 'popbee.com'
+    title: 'popbee.com'
+  tssdnews:
+    url: 'www.tssdnews.com.tw'
+    title: '台灣新生報'
+  mypeople:
+    url: 'www.mypeople.tw'
+    title: '民眾網'
+  twgreatnews:
+    title: 'twgreatnews.com 大成報'
+    url: 'www.greatnews.com.tw'
+  merit-times:
+    url: 'www.merit-times.com'
+    title: '人間福報'
+  ydn:
+    url: 'www.ydn.com.tw'
+    title: '青年日報'
+  taiwantimes:
+    url: 'www.taiwantimes.com.tw'
+    title: '台灣時報'
+  apportfolioasia:
+    title: '藝術地圖'
+    url: 'www.apportfolioasia.com'
+  house_style:
+    url: 'www.house-style.com.tw'
+    title: 'house-style.com 時尚家居雜誌'
+  mook:
+    url: 'www.mook.com.tw'
+    title: 'Mook.com景點家'
+  ttnmedia:
+    url: 'www.ttnmedia.com'
+    title: '旅報TTN'
+  richmarcom:
+    url: 'b2b.richmarcom.com.tw'
+    title: '旅奇Tracehrich'
+  solomo_xinmedia:
+    url: 'solomo.xinmedia.com'
+    title: '旅天下'
+  worldjournal:
+    url: 'www.worldjournal.com'
+    title: '世界日報'
+  top_gallerists:
+    url: 'www.top-gallerists.tw'
+    title: '臺灣一線畫廊主'
+  bcc:
+    url: 'www.bcc.com.tw'
+    title: 'Bcc.com.tw 中廣新聞網'
+  oneinfo:
+    url: 'oneinfo.tw'
+    title: '壹訊'
+  enews:
+    title: 'enews'
+    url: 'enews.tw'
+  iplayfun:
+    url: 'www.iplayfun.com.tw'
+    title: 'iPlayfun.com愛玩樂'
+  techlife:
+    url: 'www.techlife.com.tw'
+    title: 'techlife.com.tw 科技生活新聞'
+  ezpr:
+    url: 'www.ezpr.com.tw'
+    title: 'ezpr'
+  Nlog:
+    title: 'Nlog'
+    url: 'news.nlog.cc'
+  MoneyBar:
+    title: 'MoneyBar'
+    url: 'www.moneybar.com.tw'
+  Iwaishin_News:
+    title: 'Iwaishin News'
+    url: 'www.iwaishin.com'
+  Travel_King:
+    title: 'Travel King'
+    url: 'www.travelking.com.tw'
+  allnews:
+    url: 'www.allnews.tw'
+    title: '台灣民眾電子報'
+  ocac:
+    url: 'www.ocac.gov.tw'
+    title: '中華民國僑委會新聞'
+  ksnews:
+    url: 'www.ksnews.com.tw'
+    title: '更生新聞網'
+  housefun:
+    url: 'news.housefun.com.tw'
+    title: '好房網'
+  GigaCircle:
+    title: 'GigaCircle'
+    url: 'tw.gigacircle.com'
+  travelnews:
+    url: 'www.travelnews.tw'
+    title: '宜蘭新聞網'
+  cntimes:
+    url: 'www.cntimes.info'
+    title: 'cntimes大華網路報'
+  fm1007lucky:
+    url: 'www.fm1007lucky.com'
+    title: '台中廣播FM100.7'
+  travel_talk:
+    url: 'travel.talk.tw'
+    title: 'hi 捷客'
+  freshweekly:
+    url: 'freshweekly.tw'
+    title: '鮮週報'
+  stufftaiwan:
+    url: 'www.stufftaiwan.com'
+    title: '史塔夫科技事務所Stuff.com'
+  anntw:
+    url: 'anntw.com'
+    title: 'anntw.com 台灣醒報'

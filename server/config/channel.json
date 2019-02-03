@@ -1,0 +1,21 @@
+{
+  "OfficialNews": {
+    "ettoday": "https://www.ettoday.net/news_search/doSearch.php?keywords=",
+    "appledaily": "https://tw.appledaily.com/search/result?querystrS=",
+    "cna": "https://www.cna.com.tw/search/hysearchws.aspx?q="
+  },
+  "Business": {
+    "businessweekly": "https://www.businessweekly.com.tw/searchresult.aspx?keyword="
+  },
+  "Women": {
+    "marieclair": "https://www.marieclaire.com.tw/",
+    "vogue": "https://www.vogue.com.tw/search/index.asp?cx=002091278206172957848%3Ayaufrw27ucu&cof=FORID%3A10&ie=utf8&q="
+  },
+  "Gaming": {
+    "gnn": "https://acg.gamer.com.tw/search.php?s=2&kw=",
+    "4gamers": "https://cse.google.com/cse?cx=013080837145035065077:s7xnnx9p0qc&q=???&oq=???"
+  },
+  "Sport": {
+    "cycling": "https://cycling.biji.co/index.php?q=search&qStr="
+  }
+}
