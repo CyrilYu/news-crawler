@@ -34,7 +34,20 @@ def searching():
   print(request.is_json)
   data = request.get_json()
   keywords = data['keywords']
+  weeks = data['weeks']
   google_url = 'https://www.google.com/search'
+  user_agents = ['Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20130406 Firefox/23.0', \
+      'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', \
+      'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533+ \
+      (KHTML, like Gecko) Element Browser 5.0', \
+      'IBM WebExplorer /v0.94', 'Galaxy/1.0 [en] (Mac OS X 10.5.6; U; en)', \
+      'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)', \
+      'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14', \
+      'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) \
+        Version/6.0 Mobile/10A5355d Safari/8536.25', \
+      'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) \
+        Chrome/28.0.1468.0 Safari/537.36', \
+      'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0; TheWorld)']
   with open(os.path.join(APP_ROOT, 'config.yml'), 'r') as ymlfile:
     cfg = yaml.load(ymlfile)
   print(cfg['reducenews'])
@@ -46,28 +59,23 @@ def searching():
     for key, value in cfg['reducenews'].items():
       q_str = 'site:' + value['url'] + ', ' + keywords
       print(q_str)
+      
       print(saver)
       print(saver%10)
       sleep_time = random.randint(60, 180)
       if saver%10 == 0:
         time.sleep(sleep_time)
+      if saver%29 == 0:
+        time.sleep(random.randint(300, 480))
+      if saver%51 == 0:
+        time.sleep(1200)
       # 查詢參數
       # q_str = 'site:today.line.me, ' + data['keywords']
-      my_params = {'q': q_str}
+      my_params = {'q': q_str, 'as_qdr': 'w' + weeks}
+      index = random.randint(0, 9)
+      user_agent = user_agents[index]
 
-      headerlist = ["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
-        "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 OPR/43.0.2442.991",
-        "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 OPR/42.0.2393.94",
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36 OPR/47.0.2631.39",
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36",
-        "Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
-        "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
-        "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0",
-        "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0",
-        "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0",
-        "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"]
-      user_agent = random.choice(headerlist)
-      headers = {'User-Agent': user_agent}
+      headers = {'user-agent': user_agent}
       print(headers)
 
       # 下載 Google 搜尋結果
@@ -77,13 +85,14 @@ def searching():
 
       # 確認是否下載成功
       print(r.status_code)
+      print(r.url)
       if r.status_code == requests.codes.ok:
         # 以 BeautifulSoup 解析 HTML 原始碼
         soup = BeautifulSoup(r.text, 'html.parser')
 
         # 觀察 HTML 原始碼
         # print(soup.prettify())
-
+        # https://www.google.com/search?q=site:travel.ettoday.net+Hoi&tbs=cdr:1,cd_min:07/22/2018,cd_max:12/31/2018
         # 以 CSS 的選擇器來抓取 Google 的搜尋結果
         items = soup.select('div.g > h3.r > a[href^="/url"]')
         dates = soup.select('div.g > div.s > span.st')
@@ -106,6 +115,8 @@ def searching():
           print("標題：" + i.text)
           # # 網址
           # print("網址：" + i.get('href'))
+        r.close()
+        time.sleep(2)
       saver += 1
   return json.dumps({'message': 'test'})
 

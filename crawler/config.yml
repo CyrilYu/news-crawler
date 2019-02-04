@@ -11,15 +11,15 @@ reducenews:
   chinatimes:
     url: 'www.chinatimes.com'
     title: 'chinatimes.com 中時電子報'
-  Appledaily:
-    url: 'tw.news.appledaily.com'
-    title: 'Appledaily.com 蘋果新聞'
-  Libertytimes_playing:
-    url: 'playing.ltn.com.tw'
-    title: 'Libertytimes.com 自由電子報'
-  Libertytimes_news:
-    url: 'news.ltn.com.tw'
-    title: 'Libertytimes.com 自由電子報'
+  # Appledaily:
+  #   url: 'tw.news.appledaily.com'
+  #   title: 'Appledaily.com 蘋果新聞'
+  # Libertytimes_playing:
+  #   url: 'playing.ltn.com.tw'
+  #   title: 'Libertytimes.com 自由電子報'
+  # Libertytimes_news:
+  #   url: 'news.ltn.com.tw'
+  #   title: 'Libertytimes.com 自由電子報'
   # yam:
   #   url: 'n.yam.com'
   #   title: 'yam.com Yam蕃薯藤'

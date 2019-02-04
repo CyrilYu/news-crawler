@@ -31,30 +31,38 @@
   <script>
     $(document).ready(function(){
       $('#download').hide()
+      $('#research').hide()
+      $('#searching').hide()
       $('#search').click(function() {
         var keywords = $("#keywords").val()
-        alert(keywords)
-        $('#search').prop('disabled', true)
-        $('#search').val('searching.......')
+        var weeks = $('#weeks').val()
+        alert(weeks)
+        $('#search').hide()
+        $('#searching').show()
         var request = $.ajax({
           url: "http://localhost:5000/searching",
           method: "POST",
           contentType: "application/json; charset=utf-8",
-          data: JSON.stringify({keywords: keywords})
+          data: JSON.stringify({keywords: keywords, weeks: weeks})
         });
         
         request.done(function( msg ) {
           console.log(msg)
           $( "#log" ).html( msg );
-          // $('#search').prop('disabled', false)
-          // $('#search').val('search')
-          $('#search').hide();
+          $('#searching').hide();
           $("#download").show();
+          $('#research').show();
         });
         
         request.fail(function( jqXHR, textStatus ) {
           alert( "Request failed: " + textStatus );
         });
+      })
+
+      $('#research').click(function() {
+        $('#search').show()
+        $('#research').hide()
+        $("#download").hide();
       })
     })
   </script>
@@ -71,11 +79,23 @@
             <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter keywords">
               <input class="input100" type="text" name="keywords" placeholder="Input keywords" id="keywords">
             </div>
-  
+
+            <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter how many weeks past">
+              <input class="input100" type="number" min="1" max="5" name="weeks" placeholder="How many weeks past" id="weeks">
+            </div>
+
             <div class="container-login100-form-btn">
               <input type="button" class="login100-form-btn" id="search" value="Search" />
             </div>
   
+            <div class="container-login100-form-btn" id="searching">
+              <h3>搜尋中...........</h3>
+            </div>
+
+            <div class="container-login100-form-btn">
+              <input type="button" class="login100-form-btn" id="research" value="重新搜尋" />
+            </div>
+
             <div class="container-login100-form-btn" id="download">
               <a href="http://localhost:5000/download"><h1>Download</h1></a>
             </div>
